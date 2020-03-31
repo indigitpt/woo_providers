@@ -412,7 +412,6 @@ class Woocommerce_Providers
             '{{order_id}}' => $this->order->get_id(),
             '{{company_name}}' => get_option('blogname'),
             '{{date}}' => date('Y-m-d'),
-            '{{client_name}}' => $this->order->get_billing_first_name() . ' ' . $this->order->get_billing_last_name(),
         ];
 
         $success = get_post_meta($this->order->get_id(), '_wc_product_providers', true);
@@ -478,7 +477,7 @@ class Woocommerce_Providers
 					<tbody>
 						<tr>
 							<td style="text-align:left;vertical-align:top;padding:10px 6px 6px 6px;font-family:Arial, Helvetica, sans-serif, Tahoma, Verdana, Geneva;font-size:12px;line-height:150%;">
-								Segue em anexo os productos para a encomenda #{{order_id}} para o cliente <b>{{client_name}}</b>.<br>
+								Segue em anexo os productos para a encomenda #{{order_id}}.<br>
 								<p>Com os melhores cumprimentos,<br>{{company_name}}</p>
 							</td>
 						</tr>
